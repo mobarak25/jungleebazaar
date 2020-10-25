@@ -1,0 +1,42 @@
+header{
+    background-color: map-get($colors, vulcan);
+}
+.top-header{
+   padding:rem-calc(23 0);
+}
+.top-header-left{
+    width: 34%;
+}
+.top-header-mid{
+    width: 40.5%;
+}
+.top-header-right{
+    width: 25.5%;
+}
+.site-search{
+    @include border-radius(6px);
+    border: 2px solid #2d323b;
+}
+.site-search-field{
+    width: 100%;
+    padding:rem-calc(10 125 9 17);
+    margin: 0;
+    border: 0;
+    @include border-radius(4px);
+    font-family:'Poppins', sans-serif;
+    @include font(false, 16px, 25px, false);
+    &:focus{
+        outline: 0;
+    }
+}
+.site-search-btn{
+    @include font(false, 16px, 22px,false);
+    @include absolute(117px, 100%, right,0, top,0);
+    @include border-radius(0 4px 4px 0);
+    color: map-get($colors , white);
+    background-color: map-get($colors , brand);
+
+    i{
+        @include font(false, 20px, 22px,false);
+    }
+}

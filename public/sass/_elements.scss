@@ -1,0 +1,15 @@
+@mixin button-base($padding) {
+	height: 60px;
+	padding:$padding;
+    @include font(white-color, 20px, 26px, bold);
+	display: inline-block;
+	position: relative;
+	background-color: map-get($colors, brand);
+	border-radius: 30px;
+	transition: $transition;
+
+	&:hover{
+		color: map-get($colors, white-color);;
+		background-color: #d6961d;
+	}
+}

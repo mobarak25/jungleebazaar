@@ -1,0 +1,106 @@
+@mixin font($color, $size, $line-height, $weight) {
+    @if $color {
+        color: map-get($colors, $color);
+    }
+    font-size: rem($size);
+    line-height: rem($line-height);
+    @if $weight {
+        font-weight: map-get($font-weight, $weight);
+    }
+}
+@mixin center($width, $height) {
+	@if $width {
+		width: $width;
+	}
+	@if $height {
+		height: $height;
+	}
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin sudo ($width, $height, $leftRtiht, $leftRtiht-value, $topBtm, $topBtm-value, $color){
+	content: '';
+	width: $width;
+	height: $height;
+	position: absolute;
+	#{$leftRtiht}: $leftRtiht-value;
+	#{$topBtm}: $topBtm-value;
+	@if $color {
+		background-color: map-get($colors, $color);
+	}
+}
+
+@mixin absolute ($width, $height, $leftRtiht, $leftRtiht-value, $topBtm, $topBtm-value){
+	@if $width {
+		width: $width;
+	}
+	@if $height {
+		height: $height;
+	}
+	position: absolute;
+	#{$leftRtiht}: $leftRtiht-value;
+	#{$topBtm}: $topBtm-value;
+}
+
+//Cross browser CSS3 mixins
+@mixin box-shadow($left, $top, $radius, $blur, $color) {
+	box-shadow: $left $top $radius $blur $color;
+	-webkit-box-shadow: $left $top $radius $blur $color;
+	-moz-box-shadow: $left $top $radius $blur $color;
+}
+
+@mixin transition($property, $duration, $easing: linear) {
+	transition: $property $duration $easing;
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+/* class generator
+============================================================*/
+$max: 30;
+$offset: 5;
+$unit: 'px'; // Feel free to change the unit.
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}: #{$i + $unit};
+    }
+    $i: $i + $offset;
+  }
+}
+// @include list-loop('.p-l-', 'padding-left');
+
+//media screen
+@mixin media($name){
+	@if ($name == "other") {
+        @media (min-width: 1600px){
+            @content 
+        }
+    }@if ($name == "xl") {
+        @media (max-width: 1199px){
+            @content 
+        }
+    }@if ($name == "lg") {
+        @media (max-width: 991px){
+            @content 
+        }
+    }@if ($name == "md") {
+        @media (max-width: 767px){
+            @content 
+        }
+    }@if ($name == "sm") {
+        @media (max-width: 576px){
+            @content 
+        }
+    }
+}
