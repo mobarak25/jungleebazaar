@@ -2,10 +2,24 @@
     <header>
         <div class="container">
             <div class="top-header d-flex flex-wrap">
-                <div class="top-header-left">
+                <div class="top-header-left d-flex align-items-center">
                     <router-link :to="{ name: 'Home' }"
                         ><img :src="`${$root.publicPath}images/logo.png`"
                     /></router-link>
+
+                    <div class="select-box">
+                        <select>
+                            <option>Location</option>
+                            <option>Hiroshima</option>
+                            <option>Fukui</option>
+                            <option>Nagasaki</option>
+                            <option>Kagawa</option>
+                            <option>Kyoto</option>
+                            <option>Nagano</option>
+                            <option>Shiga</option>
+                            <option>Wasada</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="top-header-mid">
@@ -30,6 +44,7 @@
                         <a href="">
                             <div class="header-widgets-icon">
                                 <i class="icofont-heart-alt"></i>
+                                <div class="count">15</div>
                             </div>
                             <span>Watchlist</span>
                         </a>
@@ -39,11 +54,12 @@
                             <div class="header-widgets-icon d-flex">
                                 <i class="icofont-shopping-cart"></i>
                             </div>
-                            <span>Watchlist</span>
+                            <span>My Cart</span>
                         </a>
                     </div>
-                    <div class="top-header-widgets position-relative">
+                    <div class="top-header-widgets position-relative pr-0">
                         <a
+                            href="#"
                             class=""
                             id="dropdownMenu2"
                             data-toggle="dropdown"
@@ -51,8 +67,9 @@
                         >
                             <div class="header-widgets-icon">
                                 <i class="icofont-ui-user"></i>
+                                <i class="icofont-simple-down down-arrow"></i>
                             </div>
-                            <span>Watchlist</span>
+                            <span>Hey Sign In</span>
                         </a>
                         <div
                             class="dropdown-menu dropdown-menu-right animate"
@@ -75,7 +92,8 @@
 <script>
 export default {
     name: "SiteHeader",
-    methods: {},
+
+    mounted() {},
 };
 </script>
 
