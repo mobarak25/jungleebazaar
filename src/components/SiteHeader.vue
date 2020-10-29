@@ -45,12 +45,9 @@
                     <div class="top-header-widgets position-relative">
                         <a
                             class=""
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
+                            id="dropdownMenu2"
                             data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
+                            data-display="static"
                         >
                             <div class="header-widgets-icon">
                                 <i class="icofont-ui-user"></i>
@@ -58,8 +55,8 @@
                             <span>Watchlist</span>
                         </a>
                         <div
-                            class="dropdown-menu dropdown-menu-right animate slideIn"
-                            aria-labelledby="navbarDropdown"
+                            class="dropdown-menu dropdown-menu-right animate"
+                            aria-labelledby="dropdownMenu2"
                         >
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
