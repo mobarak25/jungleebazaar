@@ -23,7 +23,53 @@
                     </form>
                 </div>
 
-                <div class="top-header-right">jksdf</div>
+                <div
+                    class="top-header-right d-flex flex-wrap justify-content-end"
+                >
+                    <div class="top-header-widgets">
+                        <a href="">
+                            <div class="header-widgets-icon">
+                                <i class="icofont-heart-alt"></i>
+                            </div>
+                            <span>Watchlist</span>
+                        </a>
+                    </div>
+                    <div class="top-header-widgets">
+                        <a href="">
+                            <div class="header-widgets-icon d-flex">
+                                <i class="icofont-shopping-cart"></i>
+                            </div>
+                            <span>Watchlist</span>
+                        </a>
+                    </div>
+                    <div class="top-header-widgets position-relative">
+                        <a
+                            class=""
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <div class="header-widgets-icon">
+                                <i class="icofont-ui-user"></i>
+                            </div>
+                            <span>Watchlist</span>
+                        </a>
+                        <div
+                            class="dropdown-menu dropdown-menu-right animate slideIn"
+                            aria-labelledby="navbarDropdown"
+                        >
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"
+                                >Something else here</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -32,6 +78,7 @@
 <script>
 export default {
     name: "SiteHeader",
+    methods: {},
 };
 </script>
 
