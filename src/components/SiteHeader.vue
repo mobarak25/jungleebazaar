@@ -1,25 +1,29 @@
 <template>
-    <header>
+    <header v-if="deskHeader">
         <div class="top-header-wrapper">
             <div class="container">
                 <div class="top-header d-flex flex-wrap">
-                    <div class="top-header-left d-flex align-items-center">
+                    <div
+                        class="top-header-left d-flex flex-wrap align-items-center justify-content-between"
+                    >
                         <router-link :to="{ name: 'Home' }"
                             ><img :src="`${$root.publicPath}images/logo.png`"
                         /></router-link>
-
-                        <div class="select-box">
-                            <select>
-                                <option>Location</option>
-                                <option>Hiroshima</option>
-                                <option>Fukui</option>
-                                <option>Nagasaki</option>
-                                <option>Kagawa</option>
-                                <option>Kyoto</option>
-                                <option>Nagano</option>
-                                <option>Shiga</option>
-                                <option>Wasada</option>
-                            </select>
+                        <div class="select-box-wrapper">
+                            <div class="select-box">
+                                <i class="icofont-rounded-down"></i>
+                                <select>
+                                    <option>Location</option>
+                                    <option>Hiroshima</option>
+                                    <option>Fukui</option>
+                                    <option>Nagasaki</option>
+                                    <option>Kagawa</option>
+                                    <option>Kyoto</option>
+                                    <option>Nagano</option>
+                                    <option>Shiga</option>
+                                    <option>Wasada</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -152,8 +156,11 @@
 <script>
 export default {
     name: "SiteHeader",
+
     data() {
         return {
+            deskHeader: true,
+
             navs: [
                 { id: 1, name: "Drop shipping", hasChild: false },
                 { id: 2, name: "Bulk selling", hasChild: false },
@@ -177,7 +184,24 @@ export default {
             ],
         };
     },
-    methods: {},
+    methods: {
+        getWidth() {
+            var $ = window.$;
+            $(window).resize(function () {
+                var width = $(document).width();
+                if (width < 992) {
+                    console.log("dfdf");
+                    console.log(this.deskHeader);
+                }
+            });
+        },
+    },
+
+    computed: {},
+
+    mounted() {
+        this.getWidth();
+    },
 };
 </script>
 
