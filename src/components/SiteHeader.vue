@@ -2,11 +2,25 @@
     <header>
         <div class="top-header-wrapper">
             <div class="container">
-                <div class="top-header d-flex flex-wrap align-items-center">
-                    <div class="top-header-left">
+                <div class="top-header d-flex flex-wrap">
+                    <div class="top-header-left d-flex align-items-center">
                         <router-link :to="{ name: 'Home' }"
                             ><img :src="`${$root.publicPath}images/logo.png`"
                         /></router-link>
+
+                        <div class="select-box">
+                            <select>
+                                <option>Location</option>
+                                <option>Hiroshima</option>
+                                <option>Fukui</option>
+                                <option>Nagasaki</option>
+                                <option>Kagawa</option>
+                                <option>Kyoto</option>
+                                <option>Nagano</option>
+                                <option>Shiga</option>
+                                <option>Wasada</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="top-header-mid">
@@ -31,20 +45,25 @@
                             <a href="">
                                 <div class="header-widgets-icon">
                                     <i class="icofont-heart-alt"></i>
+                                    <div class="count">15</div>
                                 </div>
                                 <span>Watchlist</span>
                             </a>
                         </div>
+
                         <div class="top-header-widgets">
                             <a href="">
-                                <div class="header-widgets-icon d-flex">
+                                <div class="header-widgets-icon">
                                     <i class="icofont-shopping-cart"></i>
+                                    <div class="count">5</div>
                                 </div>
                                 <span>Watchlist</span>
                             </a>
                         </div>
-                        <div class="top-header-widgets position-relative">
+
+                        <div class="top-header-widgets position-relative pr-0">
                             <a
+                                href="#"
                                 class=""
                                 id="dropdownMenu2"
                                 data-toggle="dropdown"
@@ -52,13 +71,24 @@
                             >
                                 <div class="header-widgets-icon">
                                     <i class="icofont-ui-user"></i>
+                                    <i
+                                        class="icofont-simple-down down-arrow"
+                                    ></i>
                                 </div>
-                                <span>Watchlist</span>
+                                <span>Hey Sign In</span>
                             </a>
                             <div
                                 class="dropdown-menu dropdown-menu-right animate"
                                 aria-labelledby="dropdownMenu2"
                             >
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                >
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                >
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#"
                                     >Another action</a
@@ -73,6 +103,7 @@
                 </div>
             </div>
         </div>
+
         <div class="btm-header-wrapper">
             <div class="container">
                 <div

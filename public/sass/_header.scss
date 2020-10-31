@@ -151,10 +151,8 @@ header{
     @include border-radius(6px);
     @include font(white, 15px, 30px, false);
     border: 1px solid map-get($colors, Black-Russian);
-    background: #1c1e22;
-    background: -moz-radial-gradient(center, ellipse cover,  #1c1e22 0%, #2b3037 100%);    background: -webkit-radial-gradient(center, ellipse cover,  #1c1e22 0%,#2b3037 100%);
-    background: radial-gradient(ellipse at center,  #1c1e22 0%,#2b3037 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1e22', endColorstr='#2b3037',GradientType=1 );
+    background: rgb(43,48,55);
+    background: linear-gradient(0deg, rgba(43,48,55,1) 0%, rgba(28,30,34,1) 100%);
 
 }
 
