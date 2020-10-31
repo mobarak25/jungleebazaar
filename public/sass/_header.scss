@@ -1,6 +1,9 @@
 header{
     background-color: map-get($colors, vulcan);
 }
+.top-header-wrapper{
+    border-bottom: 1px solid map-get($colors, Black-Russian);
+}
 .top-header{
    padding:rem-calc(23 0);
 }
@@ -62,8 +65,6 @@ header{
     position: relative;
     border: 1px solid #fff;
     @include border-radius(50%);
-
-    
 }
 .header-widgets-icon i{
     line-height: 16px;
@@ -72,6 +73,44 @@ header{
 }
 .header-widgets-icon i.icofont-heart-alt{
     top: 14px;
+}
+
+.btm-header{
+    padding: rem-calc(5px 0 7px);
+}
+.main-menu{
+    width: calc(100% - 138px);
+    > ul{
+        > li{
+            padding: rem-calc(0 15px);
+            display: inline-block;
+            @include font(white, 15px, 30px, light);
+            a{
+               color: map-get($colors , white); 
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    .more-menu{
+        padding-left: rem-calc(15px);
+        @include font(brand, 15px, 30px, light);
+    }
+}
+.post-add{
+    width: 138px;
+    text-align: center;
+    @include border-radius(6px);
+    @include font(white, 15px, 30px, false);
+    border: 1px solid map-get($colors, Black-Russian);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1c1e22+0,2b3037+100 */
+background: #1c1e22; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #1c1e22 0%, #2b3037 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #1c1e22 0%,#2b3037 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #1c1e22 0%,#2b3037 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1e22', endColorstr='#2b3037',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 
